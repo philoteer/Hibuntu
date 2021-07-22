@@ -42,7 +42,7 @@ It is assumed you have a microSD card. For USB, replace `/dev/mmcblk1` with `/de
 	curl -L https://github.com/philoteer/Hibuntu/raw/master/hibuntu -o hibuntu
 	sudo bash hibuntu /dev/mmcblk1
 ```
-**2b.** Sign in the chromebook, download the script at https://goo.gl/w1uFvM,
+**2b.** Sign in the chromebook, download the script at https://github.com/philoteer/Hibuntu/raw/master/hibuntu ,
 	make sure to save it as **hibuntu** to the Downloads folder.
 	Now, press `Alt-Ctrl-t` to get into the terminal, issue two commands:
 ```
