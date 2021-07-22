@@ -1,14 +1,14 @@
 # Original Project: https://github.com/com-py/Hibuntu
 # Modified to run on the latest ChromeOS firmware
-Installs Ubuntu 16.04 (18.04 if you use debootstrap branch)
+# Installs the mainline kernel, extracted from ALARM project, with Debian Bullseye userland
 -----------------------------------------------------------------------------------------------------------------------
 # Hibuntu
-## Installing Ubuntu on Hisense C11 ARM Chromebook
+## Installing Debian on Hisense C11 ARM Chromebook
 
 ### Instructions:
 
-The script automates installing Ubuntu on Rockchip ARM chromebooks like the Hisense C11.
-It is similar to ChrUbuntu but uses Arch Linux ARM kernel and Ubuntu 16.04 LTS (trusty).
+The script automates installing Debian on Rockchip ARM chromebooks like the Hisense C11 (Veyron-jerry or similar platforms).
+It is similar to ChrUbuntu but uses Arch Linux ARM kernel and Debian 10.
 Either a microSD or USB stick can be used. I recommend the microSD option (16 or 32 GB)
 because it fits flush on the Hisense C11 and can be very fast. You can have a dual-boot, full Linux
 system on a nice, little and light machine like the Hisense C11.
@@ -19,9 +19,18 @@ system on a nice, little and light machine like the Hisense C11.
   	
 https://archlinuxarm.org/platforms/armv7/rockchip/hisense-chromebook-c11
 	
-By the way, if you want Arch Linux, do no more. I prefer Ubuntu. 
+After that, execute the first stage debootstrap by doing (*you may need to use a Desktop PC with Debian or Ubuntu, if do not have debootstrap on your chromebook):
+```
+	mkfs.ext4 ${ROOTFS}
+	mkdir /tmp/mnt
+	mount ${ROOTFS} /tmp/mnt
+	debootstrap --arch=armhf --foreign bullseye /tmp/mnt http://http.debian.net/debian
+	sync
+	umount ${ROOTFS}
+```
+where ${ROOTFS} is the partition where the  rootfs will be installed (like /dev/mmcblk0p2).
 
-Next, make sure the device you want Ubuntu on is the only external device plugged in.
+Next, make sure the device you want the OS to be installed on is the only external device plugged in.
 Power the chromebook off then on, press `Ctrl-D` at OS verification screen, do not sign in yet.
 
 Choose either 2a or 2b. I recommend 2a because it reduces ChromeOS interference.
@@ -47,8 +56,8 @@ It should take ~ 30 min, and done!
 After reboot, press `Ctrl-U` to boot from the external device. 
 If it beeps, just power off and on again. Make sure your device is the only one plugged in.
 ```
-Username:  me
-Password:  root
+Username:  root
+Password:  (empty)
 ```
 To set up wireless after the first login, use these commands to scan, connect, 
 and check connections; it's handy to jot these down:
