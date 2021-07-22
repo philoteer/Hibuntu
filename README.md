@@ -34,12 +34,12 @@ Next, make sure the device you want the OS to be installed on is the only extern
 Power the chromebook off then on, press `Ctrl-D` at OS verification screen, do not sign in yet.
 
 Choose either 2a or 2b. I recommend 2a because it reduces ChromeOS interference.
-It is assumed you have a microSD card. For USB, replace `/dev/mmcblk1` with `/dev/sda`
+It is assumed you have a microSD card. For USB, replace `/dev/mmcblk1` with `/dev/sda`. Also, you may have to replace replace `/dev/mmcblk1` to `/dev/mmcblk0` if you are running a firmware which puts the eMMC on mmcblk2.
 
 **2a.**	Press `Alt-Ctrl-F2` (right arrow on top of keyboard) to login as chronos.
 	At the `$` prompt, enter two commands:
 ```
-	wget -q https://goo.gl/w1uFvM -O hibuntu
+	curl -L https://github.com/philoteer/Hibuntu/raw/master/hibuntu -o hibuntu
 	sudo bash hibuntu /dev/mmcblk1
 ```
 **2b.** Sign in the chromebook, download the script at https://goo.gl/w1uFvM,
