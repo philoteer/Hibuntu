@@ -62,9 +62,7 @@ Password:  (empty)
 To set up wireless after the first login, use these commands to scan, connect, 
 and check connections; it's handy to jot these down:
 ```
-nmcli dev wifi
-sudo nmcli dev wifi con "your_net ssid" password "your_net_password" name "My wifi"
-nmcli dev status
+nmtui
 ```
 Wifi power save can cause connection drops. To turn it off, issue:
 `sudo iw dev mlan0 set power_save off`
