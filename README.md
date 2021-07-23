@@ -59,6 +59,8 @@ If it beeps, just power off and on again. Make sure your device is the only one 
 Username:  root
 Password:  (empty)
 ```
+
+### Tips:
 To set up wireless after the first login, use these commands to scan, connect, 
 and check connections; it's handy to jot these down:
 ```
@@ -87,3 +89,5 @@ sudo echo "40" > /sys/devices/backlight.20/backlight/backlight.20/brightness
 sudo chmod 644 /sys/devices/backlight.20/backlight/backlight.20/brightness
 ```
 You can put it in a script and bind it to a function key for easier use.
+
+Panfrost GPU Driver is apparntly somewhat buggy on this hardware. If your desktop environment is constantly crashing, try switching back to a legacy framebuffer driver or try installing Debian Buster instead of Bullseye (Buster was somehwat more stable in my personal experience; probably because Buster comes with an older version of Mesa, and does not utilize the Panfrost GPU driver much).
