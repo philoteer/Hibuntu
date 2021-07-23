@@ -76,7 +76,7 @@ To make it permanent, save the following as an executable `wifipoff` file in the
 Once you have a connection, you can add more stuff. 
 For example, to add the xfce desktop and assorted programs including firefox, do:
 ```
-sudo apt-get install openbox xubuntu-desktop
+sudo apt-get install task-lxde-desktop
 ```
 Finally, to check brightness, do:
 `cat /sys/devices/backlight.20/backlight/backlight.20/brightness`
