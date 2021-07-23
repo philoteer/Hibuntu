@@ -90,4 +90,10 @@ sudo chmod 644 /sys/devices/backlight.20/backlight/backlight.20/brightness
 ```
 You can put it in a script and bind it to a function key for easier use.
 
-Panfrost GPU Driver can run somewhat unstablely on this distribution, I am not sure why. If your desktop environment is constantly crashing, try switching back to a legacy framebuffer driver or try installing Debian Buster instead of Bullseye (Buster was somehwat more stable in my personal experience; probably because Buster comes with an older version of Mesa, and does not utilize the Panfrost GPU driver much).
+Panfrost GPU Driver can run somewhat unstablely on this distribution, I am not sure why. If your desktop environment is constantly crashing, try switching back to a legacy framebuffer driver or try installing Debian Buster instead (Buster was somehwat more stable in my personal experience; probably because Buster comes with an older version of Mesa, and does not really utilize the Panfrost driver for the OpenGL/OpenEGL acceleration). 
+
+To install Debian Buster, simply replace all "bullseye" to "buster" in the Hibuntu script, and use 
+```
+debootstrap --arch=armhf --foreign buster /tmp/mnt http://http.debian.net/debian
+```
+when debootstrapping your USB drive/SD card.
