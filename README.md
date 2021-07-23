@@ -3,8 +3,7 @@
 # Installs the mainline kernel, extracted from ALARM project, with Debian Bullseye userland
 -----------------------------------------------------------------------------------------------------------------------
 # Hibuntu
-## Installing Debian on Hisense C11 ARM Chromebook
-
+## Installing Debian on Hisense C11 ARM Chromebook (or to a veyron-jerry device, like Poin2 Chromebook 11)
 ### Instructions:
 
 The script automates installing Debian on Rockchip ARM chromebooks like the Hisense C11 (Veyron-jerry or similar platforms).
