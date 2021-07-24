@@ -17,38 +17,24 @@ system on a nice, little and light machine like the Hisense C11.
 **1.** 	Set up developer mode and format your card/stick, following exact steps 1-8 given here:
   	
 https://archlinuxarm.org/platforms/armv7/rockchip/hisense-chromebook-c11
-	
-After that, execute the first stage debootstrap by doing (*you may need to use a Desktop PC with Debian or Ubuntu, if do not have debootstrap on your chromebook):
-```
-	mkfs.ext4 ${ROOTFS}
-	mkdir /tmp/mnt
-	mount ${ROOTFS} /tmp/mnt
-	debootstrap --arch=armhf --foreign buster /tmp/mnt http://http.debian.net/debian
-	sync
-	umount ${ROOTFS}
-```
-where ${ROOTFS} is the partition where the  rootfs will be installed (like /dev/mmcblk0p2).
 
+**2.** 
+
+On your Linux desktop, install dependencies and then download and execute the hibuntu script from this repository  https://github.com/philoteer/Hibuntu/blob/master/hibuntu, like:
+
+```
+sudo apt install debootstrap qemu-user-static 
+sudo bash hibuntu ${target}
+```
+
+Where $target is the target drive, like /dev/mmcblk1 or /dev/sda . Be careful not to target a wrong drive, as it may damage your system.
+
+**3.**
 Next, make sure the device you want the OS to be installed on is the only external device plugged in.
 Power the chromebook off then on, press `Ctrl-D` at OS verification screen, do not sign in yet.
 
 Choose either 2a or 2b. I recommend 2a because it reduces ChromeOS interference.
 It is assumed you have a microSD card. For USB, replace `/dev/mmcblk1` with `/dev/sda`. Also, you may have to replace replace `/dev/mmcblk1` to `/dev/mmcblk0` if you are running a firmware which puts the eMMC on mmcblk2.
-
-**2a.**	Press `Alt-Ctrl-F2` (right arrow on top of keyboard) to login as chronos.
-	At the `$` prompt, enter two commands:
-```
-	curl -L https://github.com/philoteer/Hibuntu/raw/master/hibuntu -o hibuntu
-	sudo bash hibuntu /dev/mmcblk1
-```
-**2b.** Sign in the chromebook, download the script at https://github.com/philoteer/Hibuntu/raw/master/hibuntu ,
-	make sure to save it as **hibuntu** to the Downloads folder.
-	Now, press `Alt-Ctrl-t` to get into the terminal, issue two commands:
-```
-	shell
-	sudo bash ~/Downloads/hibuntu /dev/mmcblk1
-```
-It should take ~ 30 min, and done!
 
 ### Post installation:
 
