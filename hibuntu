@@ -200,7 +200,3 @@ Ready to start Hibuntu!
 
 umount rootfs
 sync
-
-read -p "Press [Enter] to reboot; then wait for the $device to unmount..."
-
-reboot
