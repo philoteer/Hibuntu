@@ -1,6 +1,7 @@
 # Original Project: https://github.com/com-py/Hibuntu
 # Modified to run on the latest ChromeOS firmware
 # Installs the mainline kernel, extracted from ALARM project, with Debian Buster userland
+# Please use the release version https://github.com/philoteer/Hibuntu/releases/tag/0.21 (the lastest version may not work on most system yet)
 -----------------------------------------------------------------------------------------------------------------------
 # Hibuntu
 ## Installing Debian on Hisense C11 ARM Chromebook (or to a veyron-jerry device, like Poin2 Chromebook 11)
