@@ -88,3 +88,6 @@ sudo echo "40" > /sys/devices/backlight.20/backlight/backlight.20/brightness
 sudo chmod 644 /sys/devices/backlight.20/backlight/backlight.20/brightness
 ```
 You can put it in a script and bind it to a function key for easier use.
+
+### TODO
+- Fix Panfrost for Bullseye (possibly related: https://forum.armbian.com/topic/13515-panfrost-on-rk3288-and-gpu-on-600mhz-problems/ )
