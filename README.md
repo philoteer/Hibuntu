@@ -1,4 +1,5 @@
 # Original Project: https://github.com/com-py/Hibuntu
+# Alternatives: https://github.com/hexdump0815/imagebuilder , https://wiki.postmarketos.org/wiki/Google_Veyron_Jerry_Chromebook_(google-veyron-jerry)
 # Modified to run on the latest ChromeOS firmware
 # Installs the mainline kernel, extracted from ALARM project, with Debian Buster userland
 # Please use the release version https://github.com/philoteer/Hibuntu/releases/tag/0.21 (the lastest version may not work on most system yet)
