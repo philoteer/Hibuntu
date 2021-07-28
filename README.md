@@ -5,7 +5,7 @@
 # Hibuntu
 ## Installing Debian on Hisense C11 ARM Chromebook (or to a veyron-jerry device, like Poin2 Chromebook 11)
 
-#### Alternative Instructions: Prebuilt image
+### Alternative Instructions: Prebuilt image
 
 A pre-built image for Debian Buster is attached at https://github.com/philoteer/Hibuntu/releases/tag/0.21 . Download it, and follow instructions in https://archlinuxarm.org/platforms/armv7/rockchip/hisense-chromebook-c11 (with ArchLinuxARM-veyron-latest.tar.gz replaced with the provided image) to create a bootable SD card or USB drive for a veyron Chromebook.
 
