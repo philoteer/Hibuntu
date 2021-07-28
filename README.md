@@ -11,7 +11,7 @@ A pre-built image for Debian Buster is attached at https://github.com/philoteer/
 
 ### Instructions (a harder way):
 
-**The latest script is somewhat broken (mostly because I work on a armhf "desktop", and have not tested the script different systems); please switch to a tagged release and follow instructions there instead. **
+**The latest script is somewhat broken (mostly because I work on a armhf "desktop", and have not tested the script on different systems); please switch to a tagged release and follow instructions there instead. **
 
 The script automates installing Debian on Rockchip ARM chromebooks like the Hisense C11 (Veyron-jerry or similar platforms).
 It is similar to ChrUbuntu but uses Arch Linux ARM kernel and Debian 10.
