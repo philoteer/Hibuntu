@@ -7,7 +7,9 @@
 
 ### Alternative Instructions: Prebuilt image
 
-A pre-built image for Debian Buster is attached at https://github.com/philoteer/Hibuntu/releases/tag/0.21 . Download it, and follow instructions in https://archlinuxarm.org/platforms/armv7/rockchip/hisense-chromebook-c11 (with ArchLinuxARM-veyron-latest.tar.gz replaced with the provided image) to create a bootable SD card or USB drive for a veyron Chromebook.
+A pre-built image for Debian Buster is attached at https://github.com/philoteer/Hibuntu/releases/tag/0.21 . Download it, and follow instructions in https://archlinuxarm.org/platforms/armv7/rockchip/hisense-chromebook-c11 (with ArchLinuxARM-veyron-latest.tar.gz replaced with the provided image) to create a bootable SD card or USB drive for a veyron Chromebook. 
+
+The login credentials are: root/(no password) (Do set a new password immediately). You can use nmtui to connect to a wi-fi STA.
 
 ### Instructions (a harder way):
 
