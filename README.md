@@ -1,12 +1,17 @@
-# Original Project: https://github.com/com-py/Hibuntu
 # Alternatives: https://github.com/hexdump0815/imagebuilder , https://wiki.postmarketos.org/wiki/Google_Veyron_Jerry_Chromebook_(google-veyron-jerry)
-# Modified to run on the latest ChromeOS firmware
+# Original Project: https://github.com/com-py/Hibuntu ; Modified to run on the latest ChromeOS firmware
 # Installs the mainline kernel, extracted from ALARM project, with Debian Buster userland
-# Please use the release version https://github.com/philoteer/Hibuntu/releases/tag/0.21 (the lastest version may not work on most system yet)
 -----------------------------------------------------------------------------------------------------------------------
 # Hibuntu
 ## Installing Debian on Hisense C11 ARM Chromebook (or to a veyron-jerry device, like Poin2 Chromebook 11)
-### Instructions:
+
+#### Alternative Instructions: Prebuilt image
+
+A pre-built image for Debian Buster is attached at https://github.com/philoteer/Hibuntu/releases/tag/0.21 . Download it, and follow instructions in https://archlinuxarm.org/platforms/armv7/rockchip/hisense-chromebook-c11 (with ArchLinuxARM-veyron-latest.tar.gz replaced with the provided image) to create a bootable SD card or USB drive for a veyron Chromebook.
+
+### Instructions (a harder way):
+
+**The latest script is somewhat broken (mostly because I work on a armhf "desktop", and have not tested the script different systems); please switch to a tagged release and follow instructions there instead. **
 
 The script automates installing Debian on Rockchip ARM chromebooks like the Hisense C11 (Veyron-jerry or similar platforms).
 It is similar to ChrUbuntu but uses Arch Linux ARM kernel and Debian 10.
