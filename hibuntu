@@ -165,8 +165,8 @@ cp -ar rootfs/arch_rootfs/boot/* rootfs/boot/
 cp -ar rootfs/arch_rootfs/usr/lib/* rootfs/lib/
 cp -ar rootfs/arch_rootfs/usr/share/* rootfs/usr/share/
 rm -rf rootfs/arch_rootfs
-gunzip -r rootfs/lib/modules/5.10.13-1-ARCH/kernel/
-chroot rootfs /bin/bash -c "depmod 5.10.13-1-ARCH"
+gunzip -r rootfs/lib/modules/5.11.2-1-ARCH/kernel/
+chroot rootfs /bin/bash -c "depmod 5.11.2-1-ARCH"
 
 # change default brightness, insert before last line
 # TODO: fix (sysvinit -> systemd)
