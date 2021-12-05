@@ -95,7 +95,9 @@ MNT=/tmp/rootfs
 
 echo -e "mount  $rootp rootfs"
 echo "starting debootstrap"
-debootstrap --arch=${ubuntu_arch} --foreign ${debian_ver} ${MNT} http://http.debian.net/debian
+
+wget https://ftp-master.debian.org/keys/release-11.asc -qO- | gpg --import --no-default-keyring --keyring ./debian-release-11.gpg
+debootstrap --keyring=./debian-release-11.gpg  --arch=${ubuntu_arch} --foreign ${debian_ver} ${MNT} http://http.debian.net/debian
 
 # install debian by chroot
 mount -o bind /proc    rootfs/proc
