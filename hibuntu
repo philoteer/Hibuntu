@@ -134,14 +134,14 @@ mkdir -p rootfs/lib/firmware
 mkdir -p rootfs/arch_rootfs
 
 # download, extract kernel
-src=http://tardis.tiny-vps.com/aarm/packages/l/linux-armv7/linux-armv7-5.10.13-1-armv7h.pkg.tar.xz
+src=http://tardis.tiny-vps.com/aarm/packages/l/linux-armv7/linux-armv7-5.11.2-1-armv7h.pkg.tar.xz
 tgt=rootfs/kernel.tar.gz
 curl -L $src -o ${tgt}
 tar -xf ${tgt} -C rootfs/arch_rootfs
 rm ${tgt}
 
 echo -e "\nDownloading the kernel and firmwares......"
-src=http://tardis.tiny-vps.com/aarm/packages/l/linux-armv7-chromebook/linux-armv7-chromebook-5.10.13-1-armv7h.pkg.tar.xz
+src=http://tardis.tiny-vps.com/aarm/packages/l/linux-armv7-chromebook/linux-armv7-chromebook-5.11.2-1-armv7h.pkg.tar.xz
 tgt=rootfs/kernel_kpart.tar.gz
 curl -L $src -o ${tgt}
 tar -xf ${tgt} -C rootfs/arch_rootfs
