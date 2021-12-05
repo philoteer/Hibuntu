@@ -14,7 +14,7 @@
 #first stage debootstrap expected.
 script=hibuntu
 hostname=localhost
-debian_ver=buster
+debian_ver=bullseye
 #set -x
 
 if [ "$2" != "" ]; then
